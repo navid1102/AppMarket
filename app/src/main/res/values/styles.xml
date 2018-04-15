@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">right</item>
+        <item name=" android:layout_marginRight">@dimen/margin_5</item>
+        <item name="android:textColor">@color/red_500</item>
+        <item name="android:textSize">@dimen/title_bar</item>
+    </style>
+
+    <style name="image_app">
+       <item name="android:layout_width">@dimen/image_size</item>
+        <item name="android:layout_height">@dimen/image_size</item>
+        <item name="android:background">@drawable/app_image</item>
+    </style>
+
+    <style name="name_app">
+        <item name="android:text">@string/name_app</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/app_title</item>
+    </style>
+
+    <style name="Linear_vertical">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Linear_horizental">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+</resources>

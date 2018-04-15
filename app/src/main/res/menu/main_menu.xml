@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/web"
+        android:id="@+id/item_web" />
+
+   <item
+       android:id="@+id/item_exit"
+       android:title="@string/exit"/>
+
+    <item
+        android:id="@+id/item_contact"
+        android:title="@string/contact"/>
+
+    <item
+        android:id="@+id/item_sms"
+        android:title="@string/send_sms"/>
+
+    <item
+        android:id="@+id/item_serch"
+        android:title="@string/serch"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/item_about"
+        android:title="@string/about"/>
+
+</menu>
