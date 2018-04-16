@@ -1,8 +1,11 @@
 package com.nf.myapp;
 
+import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.PlaybackParams;
 import android.net.Uri;
+import android.os.Handler;
 import android.sax.StartElementListener;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -19,7 +22,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.nf.myapp.javaClass.MyDialog;
+
 public class MainActivity extends AppCompatActivity {
+
+    boolean oneClick=false;
 
     NavigationView navigationView;
     DrawerLayout drawerLayout;
@@ -46,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 {
                     case R.id.setting:
                         Toast.makeText(getApplicationContext(),"setting",Toast.LENGTH_LONG).show();
+                        break;
+
+                    case R.id.login:
+                        MyDialog.loginUi(MainActivity.this);
                         break;
                 }
                 return false;
@@ -94,9 +105,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     public void onBackPressed() {
 
+        if (oneClick)
+        {
+            super.onBackPressed();
+            return;
+        }
+
+        this.oneClick=true;
         if (drawerLayout.isDrawerOpen(GravityCompat.START))
         {
             drawerLayout.closeDrawer(Gravity.LEFT);
@@ -125,4 +144,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                oneClick=false;
+            }
+        }, 2000);
+
 }}
