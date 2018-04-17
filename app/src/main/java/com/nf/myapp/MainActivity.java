@@ -1,15 +1,11 @@
 package com.nf.myapp;
 
-import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.PlaybackParams;
 import android.net.Uri;
 import android.os.Handler;
-import android.sax.StartElementListener;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.media.RatingCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -22,7 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.nf.myapp.javaClass.MyDialog;
+import com.nf.myapp.uiDesign.MyDialog;
 
 public class MainActivity extends AppCompatActivity {
 

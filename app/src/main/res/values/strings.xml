@@ -29,12 +29,16 @@
     <string name="are_you_sure">"are you sure?"</string>
     <string name="yes">"yes"</string>
     <string name="no">"no"</string>
-    
-    
+
+
     <string name="login_from">"ورود کاربران"</string>
     <string name="hint_user">"ورود کاربران"</string>
     <string name="hiny_pass">"رمز خود را وارد کنید""</string>
     <string name="save_pass">"ذخیره سازی"</string>
     <string name="login_user">"ورود کاربران"</string>7
     <string name="cancel">لغو</string>
+
+
+    <string name="register_successful">"ثبت نام انجام شد"</string>
+    <string name="register_fail">نشد ! دباره امتحان کن</string>
 </resources>
