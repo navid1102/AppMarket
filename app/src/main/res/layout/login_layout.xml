@@ -38,9 +38,7 @@
             android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_vpn_key_black_24dp"
             android:hint="@string/hiny_pass"
-            android:gravity="right"
             android:inputType="textPassword" />
 
         <CheckBox

@@ -29,6 +29,7 @@ public class UserDbAdapter extends AppMarketDataBase
         contentValues.put(key_passWord,user.getPassWord());
 
         return sqLiteDatabase.insert(tbl_user,null,contentValues);
+
     }
 
     public long updata(User user)
@@ -72,4 +73,26 @@ public class UserDbAdapter extends AppMarketDataBase
 
          return userList;
     }
+
+    public long login(User user)
+    {
+        long result=0;
+        SQLiteDatabase sqLiteDatabase=getReadableDatabase();
+
+        String query="select * from "+tbl_user+" where  "+key_userName+" = ? and " +key_passWord+" = ? ";
+
+        String[] params={user.getUserName(),user.getPassWord()};
+
+
+        Cursor cursor=sqLiteDatabase.rawQuery(query,params);
+
+        if (cursor.moveToNext())
+        {
+            result=cursor.getInt(cursor.getColumnIndex(key_ID));
+        }
+        return result;
+
+    }
+
+
 }

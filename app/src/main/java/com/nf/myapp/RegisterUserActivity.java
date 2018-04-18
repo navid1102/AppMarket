@@ -38,8 +38,8 @@ public class RegisterUserActivity extends AppCompatActivity {
 
                 User user=new User();
 
-                user.setPassWord(input_email.getText().toString());
-                user.setUserName(input_password.getText().toString());
+                user.setUserName(input_email.getText().toString());
+                user.setPassWord(input_password.getText().toString());
 
                 long result =userDbAdapter.insert(user);
 
