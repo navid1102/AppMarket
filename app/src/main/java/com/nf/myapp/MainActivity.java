@@ -1,10 +1,12 @@
 package com.nf.myapp;
 
+import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,7 +20,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.nf.myapp.fragment.CategoriesFragment;
+import com.nf.myapp.fragment.HomeFragment;
+import com.nf.myapp.fragment.UpdatesFragment;
 import com.nf.myapp.uiDesign.MyDialog;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,10 +36,21 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     Toolbar toolbar;
 
+    @BindView(R.id.bottom_menu)
+    BottomNavigationView bottomNavigationView;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ButterKnife.bind(this);
+
 
         navigationView=(NavigationView) findViewById(R.id.navigation_slider);
 
@@ -60,6 +79,37 @@ public class MainActivity extends AppCompatActivity {
         });
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(MainActivity.this,drawerLayout,toolbar, R.string.close, R.string.open);
         toggle.syncState();
+
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                android.support.v4.app.Fragment fragment=null;
+
+                switch (item.getItemId()){
+
+                    case R.id.home_bottom:
+                        fragment=new HomeFragment();
+                        break;
+
+                    case R.id.caregori_bottom:
+                        fragment=new CategoriesFragment();
+                        break;
+
+                    case R.id.update_bottom:
+                        fragment=new UpdatesFragment();
+                        break;
+
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.framLayout,fragment).commit();
+
+                return false;
+            }
+        });
+
+
 
     }
 

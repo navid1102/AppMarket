@@ -18,139 +18,43 @@
 
         <include
             layout="@layout/toolbar_layout" />
+<!--
+   <fragment
+       android:id="@+id/fragment"
+       android:layout_weight="3"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:name="com.nf.myapp.fragment.HomeFragment">
 
+   </fragment>-->
 
-
-        <ImageView
+        <FrameLayout
+            android:id="@+id/framLayout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/logo3"/>
+            android:layout_weight="3">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/text_style"
-                    android:text="@string/best_app"/>
+        </FrameLayout>
 
 
-                <LinearLayout
-                    style="@style/Linear_horizental">
-
-                    <LinearLayout
-                        style="@style/Linear_vertical">
-                        <ImageView
-                            style="@style/image_app"/>
-                        <TextView
-                            style="@style/name_app"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/Linear_vertical">
-                        <ImageView
-                            style="@style/image_app" />
-                        <TextView
-                            style="@style/name_app"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/Linear_vertical">
-                        <ImageView
-                            style="@style/image_app" />
-                        <TextView
-                            style="@style/name_app"/>
-                    </LinearLayout>
-
-                </LinearLayout>
 
 
-                <TextView
-                    style="@style/text_style"
-                    android:text="@string/new_app"/>
-
-
-                <LinearLayout
-                    style="@style/Linear_horizental">
-                    <LinearLayout
-                        style="@style/Linear_vertical">
-                        <ImageView
-                            style="@style/image_app"/>
-                        <TextView
-                            style="@style/name_app"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/Linear_vertical">
-                        <ImageView
-                            style="@style/image_app" />
-                        <TextView
-                            style="@style/name_app"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/Linear_vertical">
-                        <ImageView
-                            style="@style/image_app" />
-                        <TextView
-                            style="@style/name_app"/>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-                <TextView
-                    style="@style/text_style"
-                    android:text="@string/free_app"
-                    />
-
-
-                <LinearLayout
-                    style="@style/Linear_horizental">
-                    <LinearLayout
-                        style="@style/Linear_vertical">
-                        <ImageView
-                            style="@style/image_app"/>
-                        <TextView
-                            style="@style/name_app"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/Linear_vertical">
-                        <ImageView
-                            style="@style/image_app" />
-                        <TextView
-                            style="@style/name_app"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/Linear_vertical">
-                        <ImageView
-                            style="@style/image_app" />
-                        <TextView
-                            style="@style/name_app"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-        </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.3"
-            android:background="@color/purple_500">
+            >
+
+            <android.support.design.widget.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottom_menu"
+                app:menu="@menu/bottom_menu">
+
+
+            </android.support.design.widget.BottomNavigationView>
+
         </LinearLayout>
 
     </LinearLayout>
